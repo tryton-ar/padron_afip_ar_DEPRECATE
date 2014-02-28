@@ -1,0 +1,38 @@
+<tryton>
+    <data>
+
+        <record id="padron_afip_view_tree" model="ir.ui.view">
+            <field name="model">padron.afip</field>
+            <field name="type">tree</field>
+            <field name="name">padron_afip_tree</field>
+        </record>
+        <record id="padron_afip_view_form" model="ir.ui.view">
+            <field name="model">padron.afip</field>
+            <field name="type">form</field>
+            <field name="name">padron_afip_form</field>
+        </record>
+        <record id="padron_afip_import_form" model="ir.ui.view">
+            <field name="model">padron.afip.import.start</field>
+            <field name="type">form</field>
+            <field name="name">padron_afip_import_form</field>
+        </record>
+        <record id="act_padron_afip" model="ir.action.act_window">
+            <field name="name">Padron AFIP</field>
+            <field name="res_model">padron.afip</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_import_afip">
+            <field name="name">Import AFIP</field>
+            <field name="model">padron.afip</field>
+            <field name="wiz_name">padron.afip.import</field>
+        </record>
+        <record model="ir.action.keyword" id="act_import_afip">
+            <field name="keyword">form_action</field>
+            <field name="model">padron.afip,-1</field>
+            <field name="action" ref="wizard_import_afip"/>
+        </record>
+
+        <menuitem action="act_padron_afip" icon="tryton-list"
+            id="menu_padron_afip" name="Padron AFIP"
+            parent="account.menu_account_configuration" sequence="1" />
+    </data>
+</tryton>
