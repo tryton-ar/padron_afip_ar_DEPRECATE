@@ -1,4 +1,4 @@
-padron-afip-ar
+padron_afip_ar
 ==============
 
 Modulo de Tryton.

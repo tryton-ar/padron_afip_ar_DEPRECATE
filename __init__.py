@@ -6,7 +6,7 @@ def register():
     Pool.register(
         PadronAfip,
         PadronAfipStart,
-        module='padron-afip-ar', type_='model')
+        module='padron_afip_ar', type_='model')
     Pool.register(
         PadronAfipImport,
-        module='padron-afip-ar', type_='wizard')
+        module='padron_afip_ar', type_='wizard')

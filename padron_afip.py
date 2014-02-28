@@ -59,7 +59,7 @@ class PadronAfipImport(Wizard):
     "padron afip wizard import"
     __name__ = "padron.afip.import"
 
-    start = StateView('padron.afip.import.start', 'padron-afip-ar.padron_afip_import_form', [
+    start = StateView('padron.afip.import.start', 'padron_afip_ar.padron_afip_import_form', [
         Button('Cancel','end', 'tryton-cancel'),
         Button('Import', 'download_import', 'tryton-ok', default=True)
         ])
